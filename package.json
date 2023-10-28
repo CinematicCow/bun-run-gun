@@ -1,0 +1,21 @@
+{
+  "name": "gun",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "express": "^4.18.2",
+    "gun": "^0.2020.1239"
+  },
+  "scripts": {
+    "start": "bun run index.ts",
+    "build": "bun build",
+    "test": "bun test"
+  }
+}

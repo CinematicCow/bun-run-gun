@@ -8,7 +8,7 @@ import { program } from 'commander';
  * value at the end.
  * eg: program.requiredOption('-p, --port <number>', 'port number', '3000).parse();
  */
-program.requiredOption('-p, --port <number>', 'port number').parse();
+program.option('-p, --port <number>', 'port number', "3000").parse();
 
 /**
  * parse the provided port as a number
@@ -19,8 +19,8 @@ const port: number = parseInt(program.opts().port, 10);
  * If provided port is not a number, exit with error
  */
 if (isNaN(port)) {
-  console.error('Invalid port provided');
-  process.exit(1);
+    console.error('Invalid port provided');
+    process.exit(1);
 }
 
 console.log(`Port number: ${port}`);
@@ -29,7 +29,7 @@ import { app } from './app';
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
 
 // Start Gunconst { program } = require('commander');
